@@ -6,8 +6,9 @@ import { Empty } from './Empty.tsx'
 
 
 export function Tasks() {
-  const [ tasks, setTasks ] = useState([])
-  const [ newTaskText, setNewTaskText ] = useState('')
+  const [tasks, setTasks] = useState<string[]>([]); // Defina o tipo como string[]
+  const [newTaskText, setNewTaskText] = useState<string>(''); // Defina o tipo como string
+
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault(); 
@@ -23,12 +24,11 @@ export function Tasks() {
   }
 
   function deleteTask(taskToDelete: string) {
-    const taskToDeleteOne = tasks.filter(task => {
-      return task !== taskToDelete
-    })
-
-    setTasks(taskToDeleteOne)
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    const taskToDeleteOne = tasks.filter(task => task !== taskToDelete);
+    setTasks(taskToDeleteOne);
+  
+    // Atualizar o localStorage após a exclusão
+    localStorage.setItem('tasks', JSON.stringify(taskToDeleteOne));
   }
 
   function handleTaskInvalid(event: InvalidEvent<HTMLInputElement> ) {
