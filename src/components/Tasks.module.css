@@ -1,0 +1,95 @@
+.tasks {
+  padding: 4rem 22rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.created, 
+.finished {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.created span {
+  color: var(--blue);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.finished span {
+  color: var(--Purple, #8284FA);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.created strong,
+.finished strong {
+  color: var(--gray-200);
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  padding: 0.125rem 0.5rem;
+  border-radius: 62.4375rem;
+  background: var(--gray-400);
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1.5rem;
+  gap: 0.5rem;
+  padding: 0 22rem;
+}
+
+.input input {
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-500);
+  padding: 0.875rem;
+  color: var(--gray-100);
+  width: 100%;
+  color: var(--gray-100);
+  font-family: Inter;
+  font-size: 1rem;
+}
+
+.input input:focus-within {
+  visibility: visible;
+  max-height: none;
+}
+
+.input button[type="submit"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 0;
+
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 700; 
+
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.input button[type="submit"]:hover {
+  background: var(--blue);
+}
